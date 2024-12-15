@@ -9,19 +9,19 @@ program problem_2
 
         implicit none
 
-        integer :: sum, i, prev, swap
+        integer :: sum, curr, prev, swap
 
         sum = 0
-        i = 2
+        curr = 2
         prev = 1
         swap = 0
 
-        do while (i < 4_000_000)
-                if (mod(i, 2) == 0) then
-                        sum = sum + i
+        do while (curr < 4000000)
+                if (mod(curr, 2) == 0) then
+                        sum = sum + curr
                 end if
-                swap = i
-                i = i + prev
+                swap = curr
+                curr = curr + prev
                 prev = swap
         end do
         print *, sum
